@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Data Mahasiswa - Praktikum 1</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sistem Informasi Data Mahasiswa - Praktikum 1</h1>
+        <p>Sistem ini dirancang untuk mengelola data mahasiswa aktif, menampilkan informasi akademik, serta menyediakan formulir pendaftaran mahasiswa baru secara online.</p>
+    </header>
+
+    <hr>
+
+    <nav>
+        <ul>
+            <li><a href="#informasi">Informasi Aplikasi</a></li>
+            <li><a href="#daftar-mahasiswa">Daftar Mahasiswa</a></li>
+            <li><a href="#form-tambah">Tambah Mahasiswa Baru</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+ 
+    <main>
+        <section id="informasi">
+            <h2>Informasi Sistem</h2>
+            <p>Halaman web ini dikembangkan menggunakan standar HTML5 murni untuk memenuhi tugas praktikum mata kuliah Pemrograman Web di Program Studi Teknik Informatika.</p>
+            
+            <article>
+                <h3>Tentang Modul Praktikum</h3>
+                <p>Modul ini berfokus pada pemahaman dasar struktur dokumen web, penerapan elemen semantik HTML5, pengelolaan data tabular, serta pembuatan formulir interaktif dengan validasi bawaan.</p>
+            </article>
+        </section>
+
+        <hr>
+
+    
+            <h2>Daftar Mahasiswa Aktif</h2>
+            <p>Ini merupakan tabel data rekap mahasiswa aktif yang terdaftar di sistem.</p>
+            
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Foto</th>
+                        <th>NPM</th>
+                        <th>Nama Lengkap</th>
+                        <th>Program Studi</th>
+                        <th>Angkatan</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="foto1.jpg" alt="Foto Aisha" width="40" height="40"></td>
+                        <td>2415061034</td>
+                        <td>Aisha Inda Fajrani</td>
+                        <td>Teknik Informatika</td>
+                        <td>2024</td>
+                        <td>aisha@student.com</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img src="foto2.jpg" alt="Foto Citra" width="40" height="40"></td>
+                        <td>2415061077</td>
+                        <td>Citra Ayu Amanda</td>
+                        <td>Teknik Informatika</td>
+                        <td>2024</td>
+                        <td>citra@student.com</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><img src="foto1.jpg" alt="Foto Delvina" width="40" height=""40></td>
+                        <td>2415061033</td>
+                        <td>Delvina Nur Rohmatika</td>
+                        <td>Teknik Informatika</td>
+                        <td>2024</td>
+                        <td>delvina@student.com</td>
+                    </tr> 
+                </tbody>
+            </table>
+        </section>
+
+
+
+        <hr>
+        
+        <section id="form-tambah">
+            <h2>Tambah Mahasiswa Baru</h2>
+            <p>Silakan lengkapi formulir di bawah ini untuk mendaftarkan data mahasiswa baru ke dalam sistem.</p>
+
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Formulir Data Mahasiswa</legend>
+
+                 
+                    <p>
+                        <label for="npm">Nomor Pokok Mahasiswa (NPM)</label><br>
+                        <input type="text" id="npm" name="npm" placeholder="Contoh: 2415061034" required pattern="[0-9]{8,12}" title="NPM harus berupa angka 8-12 digit"><br>
+                        <small>Masukkan 8 hingga 12 digit angka NPM.</small>
+                    </p>
+
+                    
+                    <p>
+                        <label for="nama">Nama Lengkap:</label><br>
+                        <input type="text" id="nama" name="nama" placeholder="Contoh: Aisha Inda Fajrani" required minlength="3" maxlength="100"><br>
+                        <small>Masukkan nama lengkap sesuai identitas (3-100 karakter).</small>
+                    </p>
+
+                    
+                    <p>
+                        <label for="program_studi">Program Studi:</label><br>
+                        <select id="program_studi" name="program_studi" required>
+                            <option value="">Pilih Program Studi</option>
+                            <option value="Teknik Informatika">Teknik Informatika</option>
+                        </select><br>
+                        <small>Pilih program studi yang sesuai.</small>
+                    </p>
+
+                   
+                    <p>
+                        <label for="angkatan">Tahun Angkatan:</label><br>
+                        <input type="number" id="angkatan" name="angkatan" placeholder="Contoh: 2024" required min="2018" max="2026"><br>
+                        <small>Rentang tahun angkatan antara 2018 sampai 2026.</small>
+                    </p>
+
+                   
+                    <p>
+                        <label for="email">Alamat Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Contoh: email@example.com" required><br>
+                        <small>Gunakan alamat email aktif yang valid.</small>
+                    </p>
+
+                   
+                        <button type="submit">Simpan Data Mahasiswa</button>
+                        <button type="reset">Reset Formulir</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+        <p>&copy; 2026 Praktikum Pemrograman Web - Universitas Lampung. <a href="mailto:admin@kampus.ac.id">Hubungi Administrator</a> | <a href="#top">Kembali ke atas &uarr;</a></p>
+    </footer>
+
+</body>
+</html>
