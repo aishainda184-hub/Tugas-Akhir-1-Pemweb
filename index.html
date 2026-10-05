@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Informasi Data Mahasiswa - Praktikum 1</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>Sistem Informasi Data Mahasiswa - Praktikum 1</h1>
         <p>Sistem ini dirancang untuk mengelola data mahasiswa aktif, menampilkan informasi akademik, serta menyediakan formulir pendaftaran mahasiswa baru secara online.</p>
+        <img src="logo.png" alt="Logo Universitas Lampung" width="150" height="150">
     </header>
 
     <hr>
@@ -23,7 +25,7 @@
     </nav>
 
     <hr>
- 
+
     <main>
         <section id="informasi">
             <h2>Informasi Sistem</h2>
@@ -37,9 +39,10 @@
 
         <hr>
 
-    
+       
+        <section id="daftar-mahasiswa">
             <h2>Daftar Mahasiswa Aktif</h2>
-            <p>Ini merupakan tabel data rekap mahasiswa aktif yang terdaftar di sistem.</p>
+            <p>Berikut adalah tabel data rekapitulasi mahasiswa aktif yang terdaftar di sistem.</p>
             
             <table border="1" cellpadding="8" cellspacing="0">
                 <thead>
@@ -74,21 +77,19 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><img src="foto1.jpg" alt="Foto Delvina" width="40" height=""40></td>
+                        <td><img src="foto3.jpg" alt="Foto Delvina" width="40" height="40"></td>
                         <td>2415061033</td>
-                        <td>Delvina Nur Rohmatika</td>
+                        <td>Delvina Nur rohmatika</td>
                         <td>Teknik Informatika</td>
                         <td>2024</td>
                         <td>delvina@student.com</td>
-                    </tr> 
+                    </tr>
                 </tbody>
             </table>
         </section>
 
-
-
         <hr>
-        
+
         <section id="form-tambah">
             <h2>Tambah Mahasiswa Baru</h2>
             <p>Silakan lengkapi formulir di bawah ini untuk mendaftarkan data mahasiswa baru ke dalam sistem.</p>
@@ -97,21 +98,18 @@
                 <fieldset>
                     <legend>Formulir Data Mahasiswa</legend>
 
-                 
                     <p>
                         <label for="npm">Nomor Pokok Mahasiswa (NPM)</label><br>
                         <input type="text" id="npm" name="npm" placeholder="Contoh: 2415061034" required pattern="[0-9]{8,12}" title="NPM harus berupa angka 8-12 digit"><br>
                         <small>Masukkan 8 hingga 12 digit angka NPM.</small>
                     </p>
 
-                    
                     <p>
                         <label for="nama">Nama Lengkap:</label><br>
                         <input type="text" id="nama" name="nama" placeholder="Contoh: Aisha Inda Fajrani" required minlength="3" maxlength="100"><br>
                         <small>Masukkan nama lengkap sesuai identitas (3-100 karakter).</small>
                     </p>
 
-                    
                     <p>
                         <label for="program_studi">Program Studi:</label><br>
                         <select id="program_studi" name="program_studi" required>
@@ -128,14 +126,14 @@
                         <small>Rentang tahun angkatan antara 2018 sampai 2026.</small>
                     </p>
 
-                   
+                    
                     <p>
                         <label for="email">Alamat Email:</label><br>
                         <input type="email" id="email" name="email" placeholder="Contoh: email@example.com" required><br>
                         <small>Gunakan alamat email aktif yang valid.</small>
                     </p>
 
-                   
+                    <p>
                         <button type="submit">Simpan Data Mahasiswa</button>
                         <button type="reset">Reset Formulir</button>
                     </p>
@@ -146,6 +144,7 @@
 
     <hr>
 
+    <footer>
         <p>&copy; 2026 Praktikum Pemrograman Web - Universitas Lampung. <a href="mailto:admin@kampus.ac.id">Hubungi Administrator</a> | <a href="#top">Kembali ke atas &uarr;</a></p>
     </footer>
 
