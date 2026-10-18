@@ -31,7 +31,7 @@ const tabelBadge = document.getElementById("total-mahasiswa-badge");
 const tabelinfo = document.getElementById("total-mahasiswa-info");
 
 
-/*
+
 // Seleksi Elemen Formulir Tambah Mahasiswa
 const formTambah = document.getElementById("form-tambah-mahasiswa");
 const inputNpm = document.getElementById("npm");
@@ -39,7 +39,7 @@ const inputNama = document.getElementById("nama");
 const selectProdi = document.getElementById("program_studi");
 const inputAngkatan = document.getElementById("angkatan");
 const inputEmail = document.getElementById("email");
-*/
+
 
 
 // 3. Fungsi Menampilkan Notifikasi Alert Interaktif (Percobaan 3-1).
