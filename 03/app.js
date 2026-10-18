@@ -24,6 +24,11 @@ let dataMahasiswa = [
 ];
 
 // 2. Elemen Dom Utama.
+const alertBox = document.getElementById("alert-box");
+
+const tabelBody = document.getElementById("tabel-body-mahasiswa");
+const tabelBadge = document.getElementById("total-mahasiswa-badge");
+const tabelinfo = document.getElementById("total-mahasiswa-info");
 
 
 /*
@@ -38,10 +43,36 @@ const inputEmail = document.getElementById("email");
 
 
 // 3. Fungsi Menampilkan Notifikasi Alert Interaktif (Percobaan 3-1).
+function showAlert(message, type = "success") {
+    if (!alertbox) return;
+    alertBox.textContent = message;
+}
 
+function showAlert(message, type = "success") {
+    if (!alertBox) return;
+    alertBox.textContent = message;
+    alertBox.className = 'alert-box alert-${type} show'
+}
 
+function showAlert(message, type = "success") {
+    if (!alertBox) return;
+    alertBox.textContent = message;
+    alertBox.className = 'alert-box alert-${type} show'
 
+    setTimeout(() => {
+        alertBox.className = 'alert-box'
+    }, 4000)
+}
 // 4. Fungsi Pembaruan Counter Statistik Real-Time.
+function updateCounter(displayedCount, totalCount = dataMahasiswa.lenght) {
+    if (totalBadge){
+        totalBadge.textContent = totalCount;
+    }
+      if (totalInfo){
+        totalInfo.textContent = 'Menampilkan' ${displayedCount} dari
+        ${totalCount} mahasiswa;
+      }
+}
 
 
 
@@ -49,14 +80,58 @@ const inputEmail = document.getElementById("email");
 
 function renderTable(data = dataMahasiswa) {
     if (!tabelBody) return;
+    tabelBody.innerHTML = ""
+
+}
 
     // Percobaan 3-2 langkah 6
 
     if (data.length === 0) {
+        function renderTable(data = dataMahasiswa) {
+    if (!tabelBody) return;
+    tabelBody.innerHTML = ""
+}
        
         // Percobaan 3-2 langkah 7
+        function renderTable(data = dataMahasiswa) {
+    if (!tabelBody) return;
+    tabelBody.innerHTML = ""
+
+    if (data.lenght === 0) {
+        tabelBody.innerHTML =
+        <tr>
+            <td colspan="8" class="empty-row">
+                Tidak ada data mahasiswa yang cocok atau tersimpan dalam sistem.
+            </td>
+        </tr>
+        ;
+        updateCounter(0);
+        return;
+}
        
     }
+
+data.forEach(mhs, index) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+    <td>${index = 1}</td>
+    <td>
+    <img src="img/avatar-default.svg" alt-"Foto ${mhs.nama}"
+    class="avatar-img" widht="36">
+    </td>
+    <td><strong>${mhs.npm}</strong></td>
+    <td>${mhs.nama}</td>
+    <td><span class="badge">${mhs.program_studi}</spam></td>
+    <td>${mhs.angkatan}</td>
+    <td><a href="mailto:${mhs.email}" class="link-email">${mhs.email}</a></td>
+    <td>
+    <button type="button" class="btn btn-danger btn-sm"
+    onclick="hapusMahasiswa('${mhs.npm}')">
+    Hapus
+    </button>
+    </td>
+    :
+}
 
     
     data.forEach((mhs, index) => {
@@ -126,5 +201,8 @@ if (inputSearch) {
 // Inisialisasi saat DOM selesai dimuat
 
 document.addEventListener(
+    "DOMContentLoaded", function () {
+        showAlert("Selamat Datang Di Aplikasi SIMA", "info")
+    }
     
 )
